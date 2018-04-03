@@ -122,6 +122,38 @@ public class CarDao {
   }
 
   /**
+   * 登录
+   *
+   * @param username
+   * @param password
+   * @return
+   */
+  public Car login(String username, String password) {
+    Car car = null;
+    try {
+      conn = DBUtil.getConnection();
+      String sql = "select id,name,price,create_date from car where name=? and id=?";
+      ps = conn.prepareStatement(sql);
+      ps.setString(1, username);
+      ps.setInt(2, Integer.parseInt(password));
+
+      rs = ps.executeQuery();
+      if (rs.next()) {
+        car = new Car();
+        car.setId(rs.getInt(1)); // 根据字段索引获取值
+        car.setName(rs.getString("name")); // 根据字段名获取值
+        car.setPrice(rs.getDouble("price"));
+        car.setCreateDate(rs.getDate("create_date"));
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      DBUtil.close(conn, ps, rs);
+    }
+    return car;
+  }
+
+  /**
    * 查询所有小汽车
    *
    * @return
