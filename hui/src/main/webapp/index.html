@@ -58,8 +58,8 @@
           top.location.href = "index.html"
         }
         $("#btnLogin").click(()=>{
-            var username = $trim($("#username").val())
-            var password = $trim($("#password").val())
+            var username = $.trim($("#username").val())
+            var password = $.trim($("#password").val())
 
             if(!username){
                 layer.alert("请输入密码！")
