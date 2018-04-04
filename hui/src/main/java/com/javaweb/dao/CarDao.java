@@ -159,7 +159,7 @@ public class CarDao {
    * @return
    */
   public List<Car> find() {
-    List<Car> cars = new ArrayList<>();
+    List<Car> cars = new ArrayList<Car>();
 
     try {
       conn = DBUtil.getConnection();
@@ -197,7 +197,7 @@ public class CarDao {
   public List<Car> find(
       Integer page, Integer pagesize, String sort, String order,
       String name, Double price) {
-    List<Car> cars = new ArrayList<>();
+    List<Car> cars = new ArrayList<Car>();
 
     try {
       conn = DBUtil.getConnection();
