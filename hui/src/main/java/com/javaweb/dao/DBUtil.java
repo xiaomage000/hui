@@ -22,7 +22,7 @@ public class DBUtil {
     try {
       props = new Properties();
       InputStream in = DBUtil.class.getClassLoader().
-          getResourceAsStream("jdbc.properties");
+              getResourceAsStream("jdbc.properties");
       props.load(in);
 
       // 实例化数据源对象

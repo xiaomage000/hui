@@ -39,6 +39,8 @@ public class LoginServlet extends HttpServlet {
     }
     out.println(jo.toString());
 
+    // http://127.0.0.1:8086/hui/LoginServlet?username=car0&password=16
+
     out.flush();
     out.close();
   }

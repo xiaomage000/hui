@@ -8,9 +8,9 @@ import net.sf.json.processors.JsonValueProcessor;
 
 /**
  * Json 日期格式化转换
- * 
+ *
  * @author SONG
- * 
+ *
  */
 public class JsonDateValueProcessor implements JsonValueProcessor {
   private String pattern = "yyyy-MM-dd";

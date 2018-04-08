@@ -60,7 +60,7 @@
         $("#btnLogin").click(()=>{
             var username = $.trim($("#username").val())
             var password = $.trim($("#password").val())
-
+            console.log(username,'......')
             if(!username){
                 layer.alert("请输入密码！")
                 return
@@ -75,7 +75,8 @@
                 url:"LoginServlet",
                 data:{username:username,password:password},
                 dataType:"json",
-                syccess: function (user) {
+                success: function (user) {
+                    console.log(user,'......')
                     if(user && user.id){
                         localStorage.setItem("username",user.name)
                         localStorage.setItem("createDate",user.creatDate)

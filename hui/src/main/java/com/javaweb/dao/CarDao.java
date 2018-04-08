@@ -195,8 +195,8 @@ public class CarDao {
    * @return
    */
   public List<Car> find(
-      Integer page, Integer pagesize, String sort, String order,
-      String name, Double price) {
+          Integer page, Integer pagesize, String sort, String order,
+          String name, Double price) {
     List<Car> cars = new ArrayList<Car>();
 
     try {
@@ -214,7 +214,7 @@ public class CarDao {
         sql += " and price = ? ";
       }
       sql += "ORDER BY " + sort + " " + order + " LIMIT " + page + ", " +
-          pagesize + ") AS lim USING(id)";
+              pagesize + ") AS lim USING(id)";
 
       System.out.println("分页SQL: " + sql);
 
@@ -291,6 +291,6 @@ public class CarDao {
     }
     // 总页数
     return (count % pagesize == 0) ?
-        count / pagesize : count / pagesize + 1;
+            count / pagesize : count / pagesize + 1;
   }
 }

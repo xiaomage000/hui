@@ -22,19 +22,19 @@
   </filter-mapping>
 
   <servlet>
-    <servlet-name>JsonDateValueProcessor</servlet-name>
-    <servlet-class>com.javaweb.servlet.JsonDateValueProcessor</servlet-class>
-  </servlet>
-
-  <servlet-mapping>
-    <servlet-name>JsonDateValueProcessor</servlet-name>
-    <url-pattern>/JsonDateValueProcessor</url-pattern>
-  </servlet-mapping>
-
-  <servlet>
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>com.javaweb.servlet.LoginServlet</servlet-class>
   </servlet>
+
+  <servlet>
+    <servlet-name>CarServlet</servlet-name>
+    <servlet-class>com.javaweb.servlet.CarServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CarServlet</servlet-name>
+    <url-pattern>/CarServlet</url-pattern>
+  </servlet-mapping>
 
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
