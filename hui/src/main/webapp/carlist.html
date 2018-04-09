@@ -111,6 +111,25 @@
             })
         })
     })
+    function editCar(title,id) {
+        localStorage.setItem("id",id)
+        layer_show(title,"caredit.html",450,450)
+    }
+    function removeCar(id,name) {
+      layer.confirm("是否确认删除"+name+"?",()=>{
+        $.ajax({
+            type:"delete",
+            url:"CarServlet?id="+id,
+            dataTable:"json",
+            success:function (data) {
+              setTimeout(()=>{
+                location.reload()
+                layer_close()
+              },800)
+            }
+        })
+      })
+    }
 </script>
 </body>
 </html>
